@@ -1,0 +1,20 @@
+---
+const feasturesData = [
+    {image: '../images/Logo.jpg', title: '真的友鬼 1', price: 25.00},
+    {image: '../images/Logo.jpg', title: '真的友鬼 2', price: 25.00},
+    {image: '../images/Logo.jpg', title: '真的友鬼 3', price: 25.00},
+    {image: '../images/Logo.jpg', title: '真的友鬼 4', price: 25.00},
+    {image: '../images/Logo.jpg', title: '真的友鬼 5', price: 25.00},
+    {image: '../images/Logo.jpg', title: '真的友鬼 6', price: 25.00},
+    {image: '../images/Logo.jpg', title: '手镯', price: 25.00},
+]
+import Card from "./Card.astro"
+---
+
+<section class="features">
+    <div class="container">
+        {feasturesData.map(data => (
+            <Card image={data.image} title={data.title} price={data.price}></Card>
+        ))}
+    </div>
+</section>

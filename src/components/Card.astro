@@ -1,0 +1,20 @@
+---
+export interface Props {
+  title: string;
+  price: number;
+  image: string;
+}
+const { image, title, price} = Astro.props;
+---
+
+<div class="card border border-black border-opacity-25 p-2 flex items-center space-x-4">
+  <img src={image} alt={title} class="w-14 h-14 object-cover rounded-lg" />
+  <div class="flex flex-col flex-grow">
+    <h3 class="text-lg font-semibold">{title}</h3>
+    <p class="text-sm">RM {price}</p> 
+  </div>
+  <div class="">
+    <a href="" class="text-sm underline ml-auto mr-4">详情</a>
+    <button class="h-8 bg-purple-500 hover:bg-purple-700 text-black font-bold pb-1.5 pt-1 px-2 rounded text-sm">+ 购买</button>
+  </div>
+</div>
